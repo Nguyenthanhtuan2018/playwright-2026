@@ -18,12 +18,13 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   workers: 1,
+  preserveOutput: "always",
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
     baseURL: process.env.CMS_BASE_URL ?? "https://portal.shb.whitelabel.taptap.vn",
     trace: "on-first-retry",
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    screenshot: "on",
+    video: "on",
     viewport: { width: 1440, height: 900 },
   },
   projects: [

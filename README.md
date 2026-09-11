@@ -27,7 +27,11 @@ npm run test:headed   # hiện browser
 npm run test:ui       # Playwright UI mode
 ```
 
-Sau khi chạy, HTML report nằm ở `playwright-report/`. Session login được ghi vào `auth/.auth/user.json` (đã gitignore).
+Sau khi chạy:
+
+- HTML report: `playwright-report/`
+- Ảnh + video mỗi test: `test-results/` (giữ cả khi test pass)
+- Session login: `auth/.auth/user.json` (đã gitignore)
 
 ## Cấu trúc
 
